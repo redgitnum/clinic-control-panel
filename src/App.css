@@ -1,0 +1,295 @@
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-flow: row wrap;
+}
+
+.sidebar {
+  background: white;
+  padding: 10px;
+  margin: 5px;
+  flex: 1 100%;
+  box-shadow: 4px 6px 3px rgba(0, 0, 0, 0.25);
+  border: 2px outset rgba(0, 0, 0, 0.9);
+}
+
+.tables {
+  padding: 1px;
+  margin: 5px;
+  flex: 1 100%;
+  box-shadow: 4px 6px 3px rgba(0, 0, 0, 0.25);
+  border: 2px outset rgba(0, 0, 0, 0.9);
+  overflow: auto;
+  max-height: 88vh;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  
+}
+
+
+th, td {
+  text-align: left;
+  padding: 4px;
+  border-right: 1px solid rgba(0, 0, 0, 0.125);
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-size: 18px;
+}
+
+th {
+  background: #4CAF50;
+  color: white;  
+}
+
+th:last-child, td:last-child {
+  border-right: none;
+}
+
+tr:nth-child(odd) {
+  background: rgba(0, 0, 0, 0.08);
+}
+
+tr:hover {
+  background: rgba(0, 0, 0, 0.14);
+  cursor: cell;
+}
+
+.header {
+  padding: 5px 0;
+  flex: 1 100%;
+  font-size: 24px;
+  background: rgb(29, 119, 214);
+  color: white;
+  text-align: center;
+  font-family: 'Alata', sans-serif;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+button {
+  position: relative;
+  cursor: cell;
+  width: 100%;
+  height: 40px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  transition-duration: 0.3s;
+  background: whitesmoke;
+  margin: 3px 0;
+  padding: 3px 0;
+}
+
+button:hover {
+  box-shadow: inset 10px 0 1px skyblue, inset -10px 0 1px skyblue;
+  font-size: 21px;
+}
+
+button:active {
+  box-shadow: inset 500px 0 1px skyblue, inset -500px 0 1px skyblue;
+  transition-duration: 0.15s;
+  padding: 0px;
+}
+
+.modal {
+  display: block;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.15);
+  width: 100vw; 
+  height: 100vh;
+  z-index: 1;
+}
+
+.modal-box {
+  position: relative;
+  background: white;
+  margin: auto;
+  width: 300px;
+  max-height: 600px;
+  top: 5%;
+  box-shadow: 4px 6px 3px rgba(0, 0, 0, 0.25);
+  border: 2px outset rgba(89, 142, 196, 0.699);
+  animation: popIn 0.2s ease-in;
+  overflow-y: auto;
+}
+
+@keyframes popIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+.modal-body {
+  border: 2px outset rgba(206, 210, 214, 0.699);
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: space-around;
+  
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-content: space-around;
+}
+
+label {
+  font-family: 'Alata', sans-serif;
+}
+
+form {
+  margin-bottom: 5px;
+}
+
+form * {
+  width: 240px;
+}
+
+form > button {
+  width: 240px;
+  margin: 0 0 5px;
+  background: rgba(26, 160, 26, 0.651);
+}
+
+input, select {
+  padding: 8px 10px;
+  margin: 2px 0;
+  font-size: 16px;
+  border: 3px solid rgba(0, 0, 0, 0.50);
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.searchBox {
+  width: 100%;
+  padding: 1px;
+  margin: 1px;
+  font-size: 12px;
+  border: 0;
+  border-radius: 0;
+}
+
+.searchBox:focus {
+  background: rgb(240, 240, 240);
+  width: 100%;
+  padding: 1px;
+  margin: 1px;
+  font-size: 12px;
+  border: 0;
+  border-radius: 0;
+}
+input[type=date] {
+  font-size: 18px;
+  padding: 6px 2px;
+}
+
+input[type=number] {
+  -moz-appearance:textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input:focus, select:focus, textarea:focus {
+  border: 3px solid rgba(0, 0, 150, 0.50);
+}
+
+textarea {
+  padding: 8px 10px;
+  margin: 2px 0;
+  font-size: 16px;
+  border: 3px solid rgba(0, 0, 0, 0.50);
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: none;
+}
+
+h2 {
+  width: 100%;
+  text-align: center;
+  font-family: 'PT Sans Narrow', sans-serif;
+  background: rgba(0, 0, 0, 0.08);
+}
+
+hr {
+  width: 75%;
+  margin: 15px auto;
+}
+
+#visitListStyle {
+  padding: 3px 0;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  box-shadow: 4px 6px 3px rgba(0, 0, 0, 0.25);
+  border: 2px outset rgba(0, 0, 0, 0.9);
+}
+
+i {
+  position: absolute;
+  color: rgb(170, 26, 26);
+  width: 18px;
+  height: 18px;
+  font-weight: bold;
+  font-style: normal;
+  top: 5px;
+  right: 5px;
+  cursor: pointer;
+  text-align: center;
+}
+
+i:hover {
+  color: red;
+}
+
+
+@media (min-width: 850px) {
+  .sidebar {
+    flex: 1 0 0;
+  }
+  .tables {
+    flex: 5 0 0;
+  }
+  form {
+    flex-direction: row;
+  }
+  .modal-box {
+    width: 600px;
+  }
+  input, select {
+    padding: 18px 12px;
+    margin: 12px 0;
+    font-size: 18px;
+    border: 3px solid rgba(0, 0, 0, 0.50);
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  input[type=date] {
+    font-size: 24px;
+    padding: 16px 12px;
+  }
+  textarea {
+    width:516px;
+  }
+
+}
