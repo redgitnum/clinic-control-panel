@@ -35,3 +35,12 @@ The plan was to make the project similar to last one but more detailed and with 
   
 * LIST OF DOCTORS
   * self explanatory
+
+* PATIENT DETAILS
+  * You can click on a patient record to see the history of his/her visits,
+  * appointed visits have additional text 'Patient notes:' in the beginning of notes cell,
+  * visits without appointment have additional text 'Doctor notes:' in the beginning of notes cell
+
+* FILTERING
+  * You can filter the list of patients with any of the available data,
+  * multiple fields can work at the same time
